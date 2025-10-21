@@ -1,0 +1,73 @@
+{
+  "name": "servicios-integrales-frontend",
+  "version": "1.0.0",
+  "description": "Plataforma web empresarial para servicios integrales - Frontend Vue.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "lint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "analyze": "vite-bundle-analyzer"
+  },
+  "keywords": [
+    "servicios",
+    "integrales",
+    "vue",
+    "vite",
+    "tailwindcss",
+    "frontend",
+    "empresarial",
+    "responsive",
+    "spa"
+  ],
+  "author": {
+    "name": "Servicios Integrales S.A.",
+    "email": "desarrollo@serviciosintegrales.com",
+    "url": "https://www.serviciosintegrales.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/servicios-integrales/frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/servicios-integrales/frontend/issues"
+  },
+  "homepage": "https://www.serviciosintegrales.com",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
+    "axios": "^1.6.2",
+    "@headlessui/vue": "^1.7.16",
+    "@heroicons/vue": "^2.0.18",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.0",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.6",
+    "vite-bundle-analyzer": "^0.7.0",
+    "vitest": "^1.0.4",
+    "@vitest/ui": "^1.0.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
