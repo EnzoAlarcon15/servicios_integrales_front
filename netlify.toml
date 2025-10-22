@@ -7,6 +7,11 @@
 
 # Fallback para SPA (React Router)
 [[redirects]]
+  from = "/api/*"
+  to = "https://serviciosintegraless.netlify.app/api/:splat"
+  status = 200
+  force = true
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
