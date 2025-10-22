@@ -5,7 +5,7 @@ import api from '../lib/api.js';
 export default function AdminPanel() {
   const navigate = useNavigate();
 
-  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const API_BASE = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' ? window.location.origin : '');
   const [services, setServices] = useState([]);
   const [err, setErr] = useState('');
   const [ok, setOk] = useState('');

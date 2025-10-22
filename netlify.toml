@@ -5,7 +5,6 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Fallback para SPA (React Router)
 [[redirects]]
   from = "/api/*"
   to = "https://serviciosintegraless.netlify.app/api/:splat"

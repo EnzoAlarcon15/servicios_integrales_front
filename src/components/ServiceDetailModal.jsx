@@ -39,7 +39,7 @@ function getSampleBudgets(name = '') {
 
 export default function ServiceDetailModal({ service, onClose }) {
   if (!service) return null;
-  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const API_BASE = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' ? window.location.origin : '');
   const initial = service.name?.[0]?.toUpperCase() || 'S';
   const fallback = `https://placehold.co/320x200?text=${initial}`;
   const imageUrl = service.image

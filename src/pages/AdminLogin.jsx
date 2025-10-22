@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import api from '../lib/api.js';
 
 export default function AdminLogin() {
   const [username, setUsername] = useState('');
@@ -12,8 +12,7 @@ export default function AdminLogin() {
     e.preventDefault();
     setErr('');
     try {
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
-      const res = await axios.post(`${API_BASE}/api/admin/login`, { username, password });
+      const res = await api.post('/api/admin/login', { username, password });
       const token = res.data?.token;
       if (token) {
         localStorage.setItem('admin_token', token);
