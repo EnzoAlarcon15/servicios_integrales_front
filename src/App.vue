@@ -248,6 +248,8 @@ import { ref, onMounted } from 'vue'
 import ServiceCard from './components/ServiceCard.vue'
 import axios from 'axios'
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000'
+
 // Estado reactivo
 const services = ref([])
 const loading = ref(true)
@@ -259,7 +261,7 @@ const fetchServices = async () => {
     loading.value = true
     error.value = null
     
-    const response = await axios.get('/api/services')
+    const response = await axios.get(`${API_BASE}/api/services`)
     
     if (response.data.success) {
       services.value = response.data.data
